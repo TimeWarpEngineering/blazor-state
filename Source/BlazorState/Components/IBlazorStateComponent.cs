@@ -14,8 +14,9 @@ namespace BlazorState
   ///    public void ReRender() => StateHasChanged();
   /// }
   /// </example>
-  public interface IBlazorStateComponent // TODO: evaluate if this interface is even needed
+  public interface IBlazorStateComponent
   {
+    string Id { get; }
     IMediator Mediator { get; set; }
     IStore Store { get; set; }
 
