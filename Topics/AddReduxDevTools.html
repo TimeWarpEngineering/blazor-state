@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Add Redux Dev Tools </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Add Redux Dev Tools ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../Assets/Logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BlazorState:AddReduxDevTools.md">
+<h2 id="add-redux-dev-tools-to-your-project">Add Redux Dev Tools to your project</h2>
+
+<p><a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd">ReduxDevTools</a> are a chrome extension that let you view the <code>Action</code>s and <code>State</code> before and after each <code>Action</code> is handled.
+This is quite handy for debugging.</p>
+<h3 id="enable-in-blazor-state">Enable in Blazor-State</h3>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Redux Dev Tools should NOT be enabled in production.</p>
+</div>
+<p>Redux Dev Tools are disabled by default.  Update the options passed to the <code>AddBlazorState</code> extension method to set <code>UseReduxDevToolsBehavior</code> to true, as show here in the sample application:</p>
+<pre><code class="lang-csharp" name="Startup" title="Code Link" highlight-lines="16">using BlazorState;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Sample.Client;
+using System.Reflection;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add&lt;App&gt;(&quot;#app&quot;);
+builder.RootComponents.Add&lt;HeadOutlet&gt;(&quot;head::after&quot;);
+
+builder.Services.AddScoped(sp =&gt; new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddBlazorState
+(
+    (aOptions) =&gt;
+    {
+        aOptions.UseReduxDevToolsBehavior = true;
+        aOptions.Assemblies =
+        new Assembly[]
+        {
+            typeof(Program).GetTypeInfo().Assembly,
+        };
+    }
+);
+
+await builder.Build().RunAsync();    
+</code></pre><h3 id="initialize-in-app-component">Initialize in App Component</h3>
+<p>ReduxDevTools requires Javascript interop. Similar to Routing and Javascript interop one must inject and initialize <code>ReduxDevToolsInterop</code> in the base Application component.</p>
+<p>See example from the sample app below:</p>
+<pre><code class="lang-csharp" name="Startup" title="Code Link" highlight-lines="12,19">namespace Sample.Client;
+
+using BlazorState.Features.JavaScriptInterop;
+using BlazorState.Features.Routing;
+using BlazorState.Pipeline.ReduxDevTools;
+using Microsoft.AspNetCore.Components;
+using System.Threading.Tasks;
+
+public partial class App : ComponentBase
+{
+  [Inject] private JsonRequestHandler JsonRequestHandler { get; set; } = null!;
+  [Inject] private ReduxDevToolsInterop ReduxDevToolsInterop { get; set; } = null!;
+
+  // Injected so it is created by the container. Even though the IDE says it is not used, it is.
+  [Inject] private RouteManager RouteManager { get; set; } = null!;
+
+  protected override async Task OnAfterRenderAsync(bool aFirstRender)
+  {
+    await ReduxDevToolsInterop.InitAsync();
+    await JsonRequestHandler.InitAsync();
+  }
+}
+</code></pre>
+<p>Now run your app and Open the Redux Dev Tools and you should see Actions as they are executed.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/Topics/AddReduxDevTools.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

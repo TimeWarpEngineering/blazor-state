@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=" ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../../Assets/Logo.png">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>2019-01-06 15:23:20</p>
+<ul>
+<li>[x] Get powershell script to publish documentation to work.</li>
+<li>[x] File PR to fix it <a href="https://github.com/JamesRandall/Vsts-GitHub-Pages-Publish/pull/5">https://github.com/JamesRandall/Vsts-GitHub-Pages-Publish/pull/5</a></li>
+<li>[x] Create new Command to generate Toc.yml files based on markdown files in the directory.</li>
+</ul>
+<p>I will add a header to these files similar to the following:  With something we can regex for on first line.</p>
+<pre><code># auto-generated
+#------------------------------------------------------------------------------
+#    This code was generated from a template.
+#
+#    Manual changes to this file may cause unexpected behavior in your application.
+#     Manual changes to this file will be overwritten if the code is regenerated.
+#------------------------------------------------------------------------------
+</code></pre>
+<p>If the file is auto-generated we are free to delete and regenerate.  If it doesn't have this header we will consider it a manually generate toc and won't deleted it.</p>
+<p>Requirements: I want to be able to run the command from anywhere inside the git repo and have it find the docfx.json folder and generate for all below it excluding:</p>
+<ul>
+<li>api</li>
+<li>_site</li>
+<li>images</li>
+<li>Or if no children have any .md files</li>
+</ul>
+<p>2019-01-08 20:59:18</p>
+<p>Create the Console Template based on the code we are using in tools.</p>
+<p>Goal is <code>dotnet new timewarp-console</code></p>
+<p>Will generate the tools template.</p>
+<p>Then we blog about it.</p>
+<ul>
+<li>[ ] Create Folder Structure and set up CI/CD to deploy this Nuget</li>
+</ul>
+<p>2019-01-08 21:18:37</p>
+<p>I need to figure out how I did the versioning on the package other package</p>
+<ul>
+<li>[ ] split versions to be independent of blazor-state?</li>
+</ul>
+<p>2019-01-09 15:05:02</p>
+<p>Create custom template for timewarp-console:
+Follow the docs at <a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template">https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template</a></p>
+<p>Moving content into the template from the Tools project.</p>
+<p>2019-01-09 15:59:54
+I added the code and replaced Tools with Console-CSharp.</p>
+<p>Ran the BuildAndInstallTemplate.ps1</p>
+<p>created a template and it seems to work.</p>
+<p>Now clean up the commands so they are generic and not based on Tools.</p>
+<ul>
+<li>[x] Create SampleCommand</li>
+</ul>
+<p>2019-01-10 11:18:45</p>
+<ul>
+<li><p>[ ] Add Template to CI/CD pipeline</p>
+<p>Create a seperate Yml for each output.
+So we need a Console templates yml file.
+And thus need to be more explcit of the name for the timewarp-blazor template.
+Or should we put all our templates into the same nuget? timewarp-templates</p>
+</li>
+<li><p>[x] Create ConsoleTemplate.yml for Development branch using MyGet
+Tested in that it deployed to MyGet.</p>
+</li>
+<li><p>[x] Create ConsoleTemplate.yml for master branch using Nuget</p>
+</li>
+<li><p>[x] Version the templates independently</p>
+<ul>
+<li>[x] Add Commands to Tools so we can set the version of each output as needed.</li>
+<li>[x] Add powershell script to set all the versions and also easy to remember the latest version.</li>
+</ul>
+</li>
+<li><p>[ ] Add Tools to the Blazor Template with at least the GenerateToc command.
+The SetVersion command is very useful but needs to be implemented specific so maybe include a shell.
+The GitService is probably useful for all.</p>
+</li>
+<li><p>[ ] Determine a file naming convention camelCase or PascalCase and try to clean up.</p>
+</li>
+<li><p>[ ] Deployment of Nuget pacakges to MyGet and or Nuget should be a part of the
+Release pipeline not the Build pipeline.  Once yaml is available for release we should clean that up.</p>
+</li>
+</ul>
+<h4 id="various-commandline-args-for-testing">Various Commandline Args for testing</h4>
+<p>&quot;commandLineArgs&quot;: &quot;SetVersion --Project BlazorState --Major 0 --Minor 0 --Patch 1&quot;
+&quot;commandLineArgs&quot;: &quot;SetVersion --help&quot;</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/DeveloperNotebook/Cramer/2019/2019-01/2019-01-06.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Blazor-State </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Blazor-State ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="Assets/Logo.png">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><a href="https://dotnet.microsoft.com"><img src="https://img.shields.io/badge/dotnet-6.0-blue" alt="Dotnet"></a>
+<a href="https://github.com/TimeWarpEngineering/blazor-state"><img src="https://img.shields.io/github/stars/TimeWarpEngineering/blazor-state?logo=github" alt="Stars"></a>
+<a href="https://discord.gg/7F4bS2T"><img src="https://img.shields.io/discord/715274085940199487?logo=discord" alt="Discord"></a>
+<a href="https://github.com/TimeWarpEngineering/blazor-state/actions"><img src="https://github.com/TimeWarpEngineering/blazor-state/actions/workflows/release-build.yml/badge.svg" alt="workflow"></a>
+<a href="https://www.nuget.org/packages/Blazor-State/"><img src="https://img.shields.io/nuget/v/Blazor-State?logo=nuget" alt="nuget"></a>
+<a href="https://www.nuget.org/packages/Blazor-State/"><img src="https://img.shields.io/nuget/dt/Blazor-State?logo=nuget" alt="nuget"></a>
+<a href="https://github.com/TimeWarpEngineering/blazor-state/issues"><img src="https://img.shields.io/github/issues/TimeWarpEngineering/blazor-state.svg?logo=github" alt="Issues Open"></a>
+<a href="https://github.com/TimeWarpEngineering/blazor-state"><img src="https://img.shields.io/github/forks/TimeWarpEngineering/blazor-state" alt="Forks"></a>
+<a href="https://github.com/TimeWarpEngineering/blazor-state/issues"><img src="https://img.shields.io/github/license/TimeWarpEngineering/blazor-state.svg?style=flat-square&amp;logo=github" alt="License"></a>
+<a href="https://twitter.com/intent/tweet?url=https://github.com/TimeWarpEngineering/blazor-state"><img src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2FTimeWarpEngineering%2Fblazor-state" alt="Twitter"></a></p>
+<p><a href="https://twitter.com/intent/follow?screen_name=StevenTCramer"><img src="https://img.shields.io/twitter/follow/StevenTCramer.svg" alt="Twitter"></a>
+<a href="https://twitter.com/intent/follow?screen_name=TheFreezeTeam1"><img src="https://img.shields.io/twitter/follow/TheFreezeTeam1.svg" alt="Twitter"></a></p>
+<h1 id="blazor-state">Blazor-State</h1>
+<p><img src="Assets/Logo.png" alt="TimeWarp Logo"></p>
+<p>Blazor-State is a State Management architecture utilizing the MediatR pipeline.</p>
+<p>If you are familiar with MediatR <a href="https://github.com/jbogard/MediatR">^1</a>, Redux <a href="https://redux.js.org/">^2</a>,
+or the Command Pattern <a href="https://en.wikipedia.org/wiki/Command_pattern">^3</a>
+you will feel right at home.
+All of the behaviors are written as middleware to the MediatR pipeline.</p>
+<p>Please see the <strong><a href="https://github.com/TimeWarpEngineering/blazor-state">GitHub Site</a></strong> for source and filing of issues.</p>
+<h2 id="installation">Installation</h2>
+<p>You can see the latest NuGet packages from the official <a href="https://www.nuget.org/profiles/TimeWarp.Enterprises">TimeWarp NuGet page</a>.</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/Blazor-State/">Blazor-State</a> <a href="https://www.nuget.org/packages/Blazor-State/"><img src="https://img.shields.io/nuget/v/Blazor-State?logo=nuget" alt="nuget"></a></li>
+</ul>
+<pre><code class="lang-console">dotnet add package Blazor-State
+</code></pre>
+<h2 id="getting-started">Getting Started</h2>
+<p>If you are just beginning with Blazor then I recommend you start at the <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">dotnet blazor site</a>.</p>
+<p>If you already know a bit about Blazor then I recommend the <a class="xref" href="Tutorial.html">tutorial</a></p>
+<h3 id="tutorial">Tutorial</h3>
+<p>If you would like a basic step by step on adding blazor-state to the <code>blazorwasm --hosted</code> template then follow this <a class="xref" href="Tutorial.html">tutorial</a>.</p>
+<h3 id="timewarp-architecture-template">TimeWarp Architecture Template</h3>
+<p>To create a distributed application that utilizes blazor-state see the <a href="https://timewarpengineering.github.io/timewarp-architecture/TimeWarpBlazorTemplate/Overview.html">timewarp-architecture template.</a></p>
+<h2 id="the-blazor-state-architecture">The Blazor-State Architecture</h2>
+<h3 id="store-1-state">Store 1..* State</h3>
+<p>Blazor-State implements a single <code>Store</code> with a collection of <code>State</code>s.</p>
+<p>To access a state you can either inherit from the BlazorStateComponent and use</p>
+<pre><code class="lang-csharp">Store.GetState&lt;YourState&gt;()
+</code></pre>
+<p>or move the GetState functionality into your component</p>
+<pre><code class="lang-csharp">  protected T GetState&lt;T&gt;()
+  {
+    Type stateType = typeof(T);
+    Subscriptions.Add(stateType, this);
+    return Store.GetState&lt;T&gt;();
+  }
+</code></pre>
+<h3 id="pipeline">Pipeline</h3>
+<p>Blazor-State utilizes the MediatR pipeline which allows for middleware integration
+by registering an interface with the dependency injection container <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection">^4</a>.
+Blazor-State provides the extension method <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods">^5</a> , <code>AddBlazorState</code>, which registers behaviors on the pipeline.</p>
+<p>The interfaces available to extend the Pipeline are:</p>
+<ul>
+<li><code>IPipelineBehavior</code></li>
+<li><code>IRequestPreProcessor</code></li>
+<li><code>IRequestPostProcessor</code></li>
+<li><code>IStreamPipelineBehavior</code></li>
+</ul>
+<p>You can add functionality to the pipeline by implementing and registering one of these interfaces.
+See the <a href="https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/Source/TimeWarp.Architecture.Template/templates/TimeWarp.Architecture/Source/ContainerApps/Web/Web.Spa/Features/EventStream/Pipeline/EventStreamBehavior.cs">timewarp-architecture <code>EventStreamBehavior</code></a> for an example.</p>
+<h3 id="behaviorsmiddleware">Behaviors/Middleware</h3>
+<p>Blazor-State ships with the following default middleware.</p>
+<h4 id="clonestatebehavior">CloneStateBehavior</h4>
+<p>To ensure your application is in a known good state the <code>CloneStateBehavior</code> creates a clone of the <code>State</code> prior to processing the <code>Action</code>.
+If any exception occurs during the processing of the <code>Action</code> the state is rolled back.</p>
+<h4 id="rendersubscriptionspostprocessor">RenderSubscriptionsPostProcessor</h4>
+<p>When a component accesses <code>State</code> a subscription is added.
+The <code>RenderSubscriptionsPostProcessor</code> will iterate over these subscriptions and re-render those components.
+So you don't have to worry about where to call <code>StateHasChanged</code>.</p>
+<h3 id="javascript-interop">JavaScript Interop</h3>
+<p>Blazor-State uses the same &quot;Command Pattern&quot; for JavaScript interoperability.
+The JavaScript creates a request and dispatches it to Blazor where it is added to the pipeline.
+Handlers on the Blazor side can callback to the JavaScript side if needed.</p>
+<h4 id="reduxdevtoolspostprocessor">ReduxDevToolsPostProcessor</h4>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Disabled by default.  This should be disabled in production.</p>
+</div>
+<p>One of the nice features of redux is the developer tools <a href="https://github.com/reduxjs/redux-devtools">^6</a>.
+This processor implements the integration of these developer tools.</p>
+[!include[Terminology](Partials/terminology.md)]<h3 id="purefunctions-vs-nonpurefunctions">PureFunctions vs NonPureFunctions</h3>
+<p>Blazor-State does not distinguish between these.
+As they are processed via the pipeline the same.
+Thus, async calls to fetch data, send emails, or just update local state
+are implemented in the same manner. Although the developer <strong>should</strong> be aware that Handlers have side effects and
+if the developer chose they could mark the Requests as such. For example <strong>IActionWithSideEffect</strong></p>
+[!include[Contributing](Partials/acknowledgements.md)]<h2 id="unlicense">UnLicense</h2>
+<p><a href="https://choosealicense.com/licenses/unlicense/">The Unlicense</a></p>
+[!include[Contributing](Partials/contributing.md)]<h4 id="footnotes">Footnotes:</h4>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

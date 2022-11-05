@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2018-08-05 14:19:29 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2018-08-05 14:19:29 ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../Assets/Logo.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2018-08-05-141929">2018-08-05 14:19:29</h1>
+
+<ul>
+<li>[ ] Update to latest blazor 0.5</li>
+<li>[ ] Update SDK</li>
+<li>[ ] Update npm packages</li>
+<li>[ ] Fix the Nuget package name</li>
+<li>[ ] Consider solution to StateHasChanged Issue.</li>
+<li>[ ] Update all the samples</li>
+<li>[ ] Add fixie Integration test for samples</li>
+<li>[ ] Update Samples to latest templates</li>
+</ul>
+<p>Updating the project and having confidence that I didn't break anything would be great.
+How to do that, is to add tests.  This actually takes some planning and time.
+Reviewing Jimmy Bogard ContosoUniv to see if I can get ideas.  I also prefer to use fixie now.</p>
+<p>Going to start with integration tests.  As frankly I think they provide more value than Unit tests.
+Yes they are slower.</p>
+<p>I could add Integration test to the Sample app.  This duals as tests for the component as well.</p>
+<p>Going to start 2 new projects Unit Tests for BlazorState itself and integration tests for the Hosted project</p>
+<p>Reference:
+<a href="https://github.com/fixie/fixie/wiki">https://github.com/fixie/fixie/wiki</a></p>
+<p>And a previous implementation of a fixie test project.</p>
+<ul>
+<li>[x] Add Placeholder BlazorState.Unit.Tests
+Completed: 2018-08-05 22:52:01</li>
+</ul>
+<p>Given we have Features in BlazorState project itself we will do integration tests here also.</p>
+<ul>
+<li>[x] Add Placeholder BlazorState.Integration.Tests</li>
+</ul>
+<p>Create new .net core library project follow the fixie quickstart</p>
+<ul>
+<li>[x] Oops I notice I put unit test project in source dir and should be in tests.</li>
+</ul>
+<p>Reading a Jimmy blog yet again :)
+<a href="https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/">https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/DeveloperNotebook/Cramer/2018/2018-08-05.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

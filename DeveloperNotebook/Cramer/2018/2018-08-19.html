@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2018-08-19 09:08:35 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2018-08-19 09:08:35 ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../Assets/Logo.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2018-08-19-090835">2018-08-19 09:08:35</h1>
+
+<p>There are levels of integration testing.</p>
+<p>Currently we have End-To-End Testing which uses selenium.
+Integration testing that tests the Features but without the controllers.
+I am trying to add Integration Testing that actually tests features on the Client that call the server.
+I need a server running and thus try to use a in-memory Microsoft.AspNetCore.TestHost.TestServer but am getting an error during construction.</p>
+<pre><code class="lang-csharp">  class BlazorStateTestServer : TestServer
+  {
+    public BlazorStateTestServer() : base(WebHostBuilder()) { } // Error here in base
+
+    private static IWebHostBuilder WebHostBuilder() =&gt;
+      WebHost.CreateDefaultBuilder()
+      .UseStartup&lt;Startup&gt;()
+      .UseEnvironment(&quot;Local&quot;);
+  }
+
+</code></pre>
+<pre><code>System.TypeLoadException
+  HResult=0x80131522
+  Message=Could not load type 'Microsoft.AspNetCore.Builder.BlazorAppBuilderExtensions' from assembly 'Microsoft.AspNetCore.Blazor.Server, Version=0.5.1.0, Culture=neutral, PublicKeyToken=null'.
+  Source=BlazorState.Server
+  StackTrace:
+   at BlazorState.Server.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in C:\git\github\blazor-state\samples\BlazorState.Server\Startup.cs:line 34
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.&lt;StartAsync&gt;d__26.MoveNext()
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.TestHost.TestServer..ctor(IWebHostBuilder builder, IFeatureCollection featureCollection)
+   at BlazorState.Client.Integration.Tests.Infrastructure.BlazorStateTestServer..ctor() in C:\git\github\blazor-state\test\BlazorState.Client.Integration.Tests\Infrastructure\BlazorStateTestServer.cs:line 10
+   at BlazorState.Integration.Tests.Infrastructure.TestFixture.ConfigureServices(ServiceCollection aServiceCollection) in C:\git\github\blazor-state\test\BlazorState.Client.Integration.Tests\Infrastructure\TestFixture.cs:line 37
+   at BlazorState.Integration.Tests.Infrastructure.TestFixture..ctor() in C:\git\github\blazor-state\test\BlazorState.Client.Integration.Tests\Infrastructure\TestFixture.cs:line 23
+</code></pre>
+<p>I searched and found nothing yet.  Going to skip this for now.</p>
+<p>After updating to latest and still not figure it out maybe I will file an issue with Blazor team.</p>
+<p>I posted message in gitter.  If only gitter didn't suck</p>
+<ul>
+<li>[ ] Update Source link to the now .net foundation version. <a href="https://github.com/dotnet/sourcelink/">https://github.com/dotnet/sourcelink/</a></li>
+</ul>
+<p>All updated now need to update to 0.5.1 and see if it works.</p>
+<p>Requires significant changes.</p>
+<p>This talks about some.
+<a href="https://blogs.msdn.microsoft.com/webdev/2018/07/25/blazor-0-5-0-experimental-release-now-available/">https://blogs.msdn.microsoft.com/webdev/2018/07/25/blazor-0-5-0-experimental-release-now-available/</a></p>
+<p><code>JsonUtil.Deserialize</code> changes to <code>Json.Deserialize</code> which is found in <code>using Microsoft.JSInterop;</code></p>
+<p>The intialize method in my js isn't running for some reason.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/DeveloperNotebook/Cramer/2018/2018-08-19.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

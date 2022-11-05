@@ -1,0 +1,1370 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "source_relative_path": "../Assets/Logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "Assets/Logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Assets/Logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "Assets/Logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "syLTfzysGDwDir4zndkHSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Acknowledgements.md",
+      "output": {
+        ".html": {
+          "relative_path": "Acknowledgements.html",
+          "hash": "du7d1tzbrGPkbahfKdZ36g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Api/Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "Api/Overview.html",
+          "hash": "13KjfXgBj20WoEl2qxyY4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ArchitecturalDecisionRecords/0000-use-markdown-architectural-decision-records.md",
+      "output": {
+        ".html": {
+          "relative_path": "ArchitecturalDecisionRecords/0000-use-markdown-architectural-decision-records.html",
+          "hash": "/nJxB6AO1eTzLvr4m//BEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Backlog/Done.md",
+      "output": {
+        ".html": {
+          "relative_path": "Backlog/Done.html",
+          "hash": "MuZUe/EVrr7Fn0orRQpoRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Backlog/Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "Backlog/Overview.html",
+          "hash": "CKQB1EmU8wuiMYvOWfsX0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Backlog/Rejected.md",
+      "output": {
+        ".html": {
+          "relative_path": "Backlog/Rejected.html",
+          "hash": "Gnr+1lOCWVJG+4f75KGPDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Backlog/Todo.md",
+      "output": {
+        ".html": {
+          "relative_path": "Backlog/Todo.html",
+          "hash": "QYe65Z7NGKFTWd6B08YfSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Backlog/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Backlog/toc.html",
+          "hash": "tDYzZTDnsQ5yuoIu/TjFnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.ActionHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.ActionHandler-1.html",
+          "hash": "J0Mr0+rJ+KU94XKUBUvVDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.BlazorStateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.BlazorStateComponent.html",
+          "hash": "9/iatpmDdQr3nb9s3Uw5gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.BlazorStateInputComponent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.BlazorStateInputComponent-1.html",
+          "hash": "Xo8TTVYLMmGwYmS3mZxOQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.BlazorStateOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.BlazorStateOptions.html",
+          "hash": "m+yApmzizOSkR6tOoI3aIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.BaseJsonRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.BaseJsonRequest.html",
+          "hash": "NScDNfIL3aKWgDNlWpkpWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.InvalidRequestTypeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.InvalidRequestTypeException.html",
+          "hash": "OLn9n4u1ML3K3N5eISFvsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.JsonRequest-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.JsonRequest-1.html",
+          "hash": "KV450Peq9fYlEAPAyPsxHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.JsonRequestHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.JsonRequestHandler.html",
+          "hash": "AZD+S7WQpgIbSEODE89Y8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.JavaScriptInterop.html",
+          "hash": "XQDSja+r1Iy/APtyVjXWxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.Routing.RouteManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.Routing.RouteManager.html",
+          "hash": "sdxOPYSU3oJdB7Uw3en7JA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.Routing.RouteState.ChangeRouteAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.Routing.RouteState.ChangeRouteAction.html",
+          "hash": "FpFyASE4Rlq/DHBaziWfzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.Routing.RouteState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.Routing.RouteState.html",
+          "hash": "EmfRBTqNOYjMdlnvgKRcEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Features.Routing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Features.Routing.html",
+          "hash": "C86XT2prU+9I1PhdQh4qvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.IAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.IAction.html",
+          "hash": "209mq/bd29O+HnPtzp3xqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.IBlazorStateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.IBlazorStateComponent.html",
+          "hash": "GLX7qDCiFr6I8hoIyMcJQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.IReduxDevToolsStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.IReduxDevToolsStore.html",
+          "hash": "Zh4FSN7sJJWlcPA8gTBZXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.IState-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.IState-1.html",
+          "hash": "UDnWnGQ8Y/Z/fxiLlFnhHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.IState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.IState.html",
+          "hash": "fOYnktTTztWqCvErJ4dDmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.IStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.IStore.html",
+          "hash": "xCOe7eGoXgOMPNsVhr3J1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.BlazorStateDevToolsComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.BlazorStateDevToolsComponent.html",
+          "hash": "aCq5Xnexr2uoQlrNcdWuyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.BlazorStateDevToolsInputComponent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.BlazorStateDevToolsInputComponent-1.html",
+          "hash": "h/XsVTZpo3GRHOwX7yXTyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.IDevToolsComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.IDevToolsComponent.html",
+          "hash": "uAuTUvVo9HnBm83S6mCHwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.ReduxDevToolsBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.ReduxDevToolsBehavior-2.html",
+          "hash": "ggI0QdIqWinkGHklZD0ZLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.ReduxDevToolsInterop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.ReduxDevToolsInterop.html",
+          "hash": "HQc8fjxmxNojq9FAHyK5sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.ReduxDevToolsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.ReduxDevToolsOptions.html",
+          "hash": "pQN1GtjuW/qIJvuHKzop4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.ReduxDevTools.html",
+          "hash": "Rt3NRV24QUJQa0ZwYBcnOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.RenderSubscriptions.NonNestedClassException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.RenderSubscriptions.NonNestedClassException.html",
+          "hash": "fui2WA1fLPfQRTk252sixw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.RenderSubscriptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.RenderSubscriptions.html",
+          "hash": "9xE+/944AmptqSStJDauuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.State.ExceptionNotification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.State.ExceptionNotification.html",
+          "hash": "dpWsweQt6BZOpUJoZRKw/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Pipeline.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Pipeline.State.html",
+          "hash": "BuIzKlKFsIp3gfpVxDhZ6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.ServiceCollectionExtensions.html",
+          "hash": "O72T504pAUlCQY1uDy8B0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Services.BlazorHostingLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Services.BlazorHostingLocation.html",
+          "hash": "1VduAhwggufxnIfszlBIXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Services.html",
+          "hash": "vSNTi/b97OXOE33TNp24IQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.State-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.State-1.html",
+          "hash": "bczS4s6eaA+erPrSk6GU8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.Subscriptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.Subscriptions.html",
+          "hash": "uuHMzou1vP7enWdc4AicDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/BlazorState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/BlazorState.html",
+          "hash": "hhVEGF1ith5oXBZDS6ErCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/Microsoft.JSInterop.CamelCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/Microsoft.JSInterop.CamelCase.html",
+          "hash": "E2X0+WLrMzBNx3NsEt2HUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/Microsoft.JSInterop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/Microsoft.JSInterop.html",
+          "hash": "pd/CuIo2GA40WJUIf6GxzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/System.Reflection.MethodInfoExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/System.Reflection.MethodInfoExtensions.html",
+          "hash": "5hzDkgTUP0kZALtb3T8npg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Blazor-State/api/System.Reflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/System.Reflection.html",
+          "hash": "O7Ib1G9wiqtamy3pRWjZyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Blazor-State/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Blazor-State/api/toc.html",
+          "hash": "lVh9FhdmgCb+dk8WarVxug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Contributing/Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "Contributing/Overview.html",
+          "hash": "F6MlejLaqssqJA7QTuAy3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DevOps/DevOps.md",
+      "output": {
+        ".html": {
+          "relative_path": "DevOps/DevOps.html",
+          "hash": "GoXLj+0gHwosZ9NFuV7PNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "DevOps/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "DevOps/toc.html",
+          "hash": "7VPjdHJIAAqADvrGA6XkQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-05.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-05.html",
+          "hash": "NRTK9hNeVEnI3cBXI72vww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-06.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-06.html",
+          "hash": "u9jXHHr/qt5YbtbXljSRTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-14.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-14.html",
+          "hash": "Glu58Gf95HS3Z2GYFbtn2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-15.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-15.html",
+          "hash": "yBRhlyPbSuQAGRlQ+xijiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-16.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-16.html",
+          "hash": "mELM/GX0sl0Fms9H9oCIfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-18.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-18.html",
+          "hash": "l1RAtA6qrIgPB+SCOyt8Qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-19.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-19.html",
+          "hash": "xGpTPDBPVMRLC6hpkZPNWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-21.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-21.html",
+          "hash": "e94m2klghBzFD4WfJBJYJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-22.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-22.html",
+          "hash": "jFvRoW9GYrGu+pvOZsGwaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-23.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-23.html",
+          "hash": "cDeeuMYKJm/RvaYx3BRqlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-24.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-24.html",
+          "hash": "TgvURwX5Xl8Q5+CBXhWwbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-25.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-25.html",
+          "hash": "rWsBphSw1PRB4WZBdy3FHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-08-26.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-08-26.html",
+          "hash": "qAoZzdIkOIs4igYprc1iOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-09-05.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-09-05.html",
+          "hash": "jRvbN2iPVXftUlV2M/rtmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-09-13.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-09-13.html",
+          "hash": "5lKDYl1czrOWGEpP5v6qiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-09-15.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-09-15.html",
+          "hash": "zJBTvKduoBvl/YgGab/2RA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2018/2018-12-13.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2018/2018-12-13.html",
+          "hash": "t8W2PFBaJrymlOVVIj0K2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-02.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-02.html",
+          "hash": "5mFeJ/dJZh8G6vOwrFhk4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-04.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-04.html",
+          "hash": "cBtlkx+FW8Ny8IWPRf7Ang=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-05.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-05.html",
+          "hash": "KdEECsL5iYpUlqn0HgUT7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-06.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-06.html",
+          "hash": "xQ/P0uI8qljWWYORW2YsDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-13.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-13.html",
+          "hash": "KGqDFEYlWRlqdcUj5WmDgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-21.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Cramer/2019/2019-01/2019-01-21.html",
+          "hash": "92zAC4sp+8gcT/FEMc7q0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DeveloperNotebook/Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/Overview.html",
+          "hash": "CM1NgiNiEoWxwRmm6chM/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "DeveloperNotebook/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "DeveloperNotebook/toc.html",
+          "hash": "CTPoIPRx+2nx48r1iLQLKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Features/Features.md",
+      "output": {
+        ".html": {
+          "relative_path": "Features/Features.html",
+          "hash": "Rx6ZWQmLgb+pST9sQM6Ucw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Features/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Features/toc.html",
+          "hash": "IBh/P4YtZzYIoIhWyCFDrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/BlazorWasmHostedScreenShot.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/BlazorWasmHostedScreenShot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ReduxDevTools.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ReduxDevTools.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ReduxRouteState.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ReduxRouteState.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Migrations/Migration1-2.md",
+      "output": {
+        ".html": {
+          "relative_path": "Migrations/Migration1-2.html",
+          "hash": "P76Rgaw+iEOsEZgAQ2T0yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Migrations/Migration2-3.md",
+      "output": {
+        ".html": {
+          "relative_path": "Migrations/Migration2-3.html",
+          "hash": "pFnTu738+j2+PN6mWiE+NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Migrations/Migration3-4.md",
+      "output": {
+        ".html": {
+          "relative_path": "Migrations/Migration3-4.html",
+          "hash": "DiDOjrxTUPmWQXibhZ9Nyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Migrations/Migration4-5.md",
+      "output": {
+        ".html": {
+          "relative_path": "Migrations/Migration4-5.html",
+          "hash": "wVn2TxkqNC2majGhdyy2hA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Migrations/Migration5-6.md",
+      "output": {
+        ".html": {
+          "relative_path": "Migrations/Migration5-6.html",
+          "hash": "SPPiB43lw9Q0y9Tfkqx5qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Migrations/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Migrations/toc.html",
+          "hash": "Ouy3gKCIvfSQAYT31GVPVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "include-not-found",
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "Overview.html",
+          "hash": "Bu/mjLjO4+AOA3430WuJWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Partials/Acknowledgements.md",
+      "output": {
+        ".html": {
+          "relative_path": "Partials/Acknowledgements.html",
+          "hash": "SVHmnEt45iiRy/HTgWfLWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Partials/Contributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "Partials/Contributing.html",
+          "hash": "CsDMHtQsTUGKi3G066hkAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Partials/Terminology.md",
+      "output": {
+        ".html": {
+          "relative_path": "Partials/Terminology.html",
+          "hash": "xoBHduuPTyzBegkWXo5JLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes/Release1.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/Release1.0.0.html",
+          "hash": "cqqwzZjpGUm+aN2IWlHErQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes/Release2.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/Release2.0.0.html",
+          "hash": "y5E+BURRlPwlq1r+AqAB8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes/Release3.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/Release3.0.0.html",
+          "hash": "mdDNkW5/i3LZfSvpswnidQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes/Release4.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/Release4.0.0.html",
+          "hash": "T2yIAkhw0ocPkOsLExqjXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes/Release5.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/Release5.0.0.html",
+          "hash": "/gA1qxNaB+MnrI+ykSEpXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ReleaseNotes/Release6.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/Release6.0.0.html",
+          "hash": "mRfB3QB0WIzg9rRw3E3hLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "ReleaseNotes/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ReleaseNotes/toc.html",
+          "hash": "/GS6uKif2sxvMXZpw+ya3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Topics/AddReduxDevTools.md",
+      "output": {
+        ".html": {
+          "relative_path": "Topics/AddReduxDevTools.html",
+          "hash": "ldBilWW+0fBimnhHyhZpaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Topics/EnableJavascriptInterop.md",
+      "output": {
+        ".html": {
+          "relative_path": "Topics/EnableJavascriptInterop.html",
+          "hash": "5SkCtl58r/x8Dt3dHqL/yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Topics/Routing.md",
+      "output": {
+        ".html": {
+          "relative_path": "Topics/Routing.html",
+          "hash": "02ISQRd/RMMMNRmYC3K/dQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Topics/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Topics/toc.html",
+          "hash": "S2o3lmt669nly/gzHgnaZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Tutorial.md",
+      "output": {
+        ".html": {
+          "relative_path": "Tutorial.html",
+          "hash": "Vp7J0ha9zzOJD+0cFgrM3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "SSBcw5FOrYv8o8dyZD6ksw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "tIAWFO2qFBe6iB9no2zI6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 55,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 40,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

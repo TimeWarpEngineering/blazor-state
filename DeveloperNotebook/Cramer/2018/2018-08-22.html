@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2018-08-22 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2018-08-22 ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../Assets/Logo.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="2018-08-22">2018-08-22</h1>
+
+<p>2018-08-22 11:50:06 Reviewing the new features and the code in Blazor-State.</p>
+<p>First thought I see is in App.cshtml. I split out the CS to code behind
+App.cshtml.cs with class AppModel.</p>
+<p>Now Why do I need Singletons as components?  Why not just create them up front?
+Startup creates the first thing.</p>
+<p>aBlazorApplicationBuilder.AddComponent<app>(&quot;app&quot;);<p>
+<p>So se could either use services</p>
+<pre><code class="lang-csharp">aBlazorApplicationBuilder.Services.GetService&lt;RouteManager&gt;();
+</code></pre>
+<p>or we can inject things into the App.</p>
+<p>Previous version used the OnInit</p>
+<pre><code class="lang-csharp">  builder.OpenComponent&lt;JavaScriptInteropComponent&gt;(0);
+  builder.CloseComponent();
+  builder.OpenComponent&lt;ReduxDevToolsComponent&gt;(0);
+  builder.CloseComponent();
+  builder.OpenComponent&lt;RouteManagerComponent&gt;(1);
+  builder.CloseComponent();
+</code></pre>
+<p>but thats ugly and maybe can be cleaner now.</p>
+<p>trying it out now with injecting into the App.</p>
+<p>First test remove RouteManagerComponent</p>
+<p>And inject the RouteManager directly in the <code>AppModel</code></p>
+<pre><code class="lang-csharp">[Inject] private RouteManager RouteManager { get; set; }
+</code></pre>
+<p>it works.</p>
+<p>Need to run End-to-end tests  Start selenium with the following.</p>
+<pre><code>selenium-standalone start
+</code></pre>
+<ul>
+<li>Cleaned up all the code.</li>
+<li>Refactored App</li>
+<li>moved all @functions to code behind</li>
+</ul>
+<p>tomorrow add blazorstate.server.integration.tests and fix Javascript interop</p>
+</app></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/DeveloperNotebook/Cramer/2018/2018-08-22.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

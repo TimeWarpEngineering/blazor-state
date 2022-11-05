@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Terminology </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Terminology ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../Assets/Logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../Assets/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="blazor-state.Terminology.md">
+<h2 id="terminology">Terminology</h2>
+
+<p>The pattern used by Blazor-State and MediatR has been around for many years and goes by different names.
+We list various related terms here and <strong>Bold</strong> indicates the term used in Blazor-State.</p>
+<h3 id="signalsactionsrequestscommands">Signals/<strong>Actions</strong>/<strong>Requests</strong>/Commands/</h3>
+<p>In Redux they call them &quot;Action&quot;.<br>
+In UML they are &quot;Signal&quot;.<br>
+In Command Pattern they are &quot;Command&quot;<br>
+In MediatR they are <code>Request</code>
+In Blazor-State we call them <code>Actions</code> when they are handled on the Client and <code>Requests</code> if they handled on the Server.</p>
+<h3 id="reducerhandlerexecutor">Reducer/<strong>Handler</strong>/Executor</h3>
+<p>This is the code that processes the <code>Request/Action</code> and returns the <code>Response</code>.</p>
+<p>In Redux they call them &quot;Reducer&quot;.
+In Command Pattern we call them &quot;Executor&quot;.<br>
+In MediatR they are <code>Handler</code>.<br>
+In Blazor-State we call them <code>Handler</code>.</p>
+<h3 id="feature">Feature</h3>
+<p>A Feature is the collection of the code needed to implement a
+particular <a href="https://jimmybogard.com/vertical-slice-architecture/">Vertical Slice</a>
+of the application.</p>
+<p>On the server side we use the same architecture, where the Features contain
+<code>Endpoint</code>, <code>Handler</code>, <code>Request</code>, <code>Response</code>, etc...
+Each endpoint maps the HTTP Request to the <code>Request</code> object and then sends the <code>Request</code>
+on to the mediator pipeline.
+The <code>Handler</code> acts on the <code>Request</code> and returns a <code>Response</code>.</p>
+<p>Server side follows the <code>Request</code> in <code>Response</code> out pattern.</p>
+<p>A Feature Folder on the client side will contain an <code>Action</code> and the <code>Handler</code>
+and any corresponding files needed for this feature.
+The <code>Handler</code> acts on the <code>Action</code> and updates the corresponding <code>State</code>.</p>
+<p>Client side follows the <code>Action</code> in new <code>State</code> out pattern.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TimeWarpEngineering/blazor-state/blob/Cramer/2022-11-05/docfx/Documentation/Partials/Terminology.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
