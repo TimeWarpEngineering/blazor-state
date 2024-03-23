@@ -72,5 +72,22 @@ jobs:
           cd Source/TimeWarp.State.Plus/bin/Release
           dotnet nuget push TimeWarp.State.Plus.*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key ${{secrets.PUBLISH_TO_NUGET_ORG}}
           # Assuming snupkg files are in the same directory and are named correspondingly
+          
+      - name: Extract version from .csproj
+        id: extract_version
+        run: |
+          [xml]$xml = Get-Content -Path "Directory.Build.props"
+          $version = $xml.Project.PropertyGroup.PackageVersion
+          echo "Extracted version: $version"
+          echo "::set-output name=VERSION::$version"
+        shell: pwsh
+          
+      - name: Tag commit with version
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git tag -a "${{ steps.extract_version.outputs.VERSION }}" -m "Release ${{ steps.extract_version.outputs.VERSION }}"
+          git push origin "${{ steps.extract_version.outputs.VERSION }}"
+        shell: pwsh
   
       - run: echo "🍏 This job's status is ${{ job.status }}."
